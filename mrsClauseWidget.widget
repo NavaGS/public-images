@@ -1,0 +1,86 @@
+{
+  "version": "1.0",
+  "name": "mrsClause",
+  "template": "{\"type\":\"Card\",\"size\":\"full\",\"children\":[{\"type\":\"Row\",\"align\":\"start\",\"gap\":4,\"children\":[{\"type\":\"Image\",\"src\":{{ (user.image) | tojson }},\"size\":44,\"radius\":\"full\"},{\"type\":\"Col\",\"children\":[{\"type\":\"Caption\",\"value\":{{ (user.name) | tojson }},\"size\":\"lg\",\"weight\":\"semibold\"}]}]},{\"type\":\"Markdown\",\"value\":{{ (response_markdown) | tojson }}},{\"type\":\"Image\",\"src\":{{ (response_image) | tojson }},\"size\":400,\"frame\":true,\"fit\":\"scale-down\",\"flush\":true}]}",
+  "jsonSchema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "response_markdown": {
+        "type": "string"
+      },
+      "response_image": {
+        "type": "string"
+      },
+      "response": {
+        "type": "string"
+      },
+      "user": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "image",
+          "name"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "response_markdown",
+      "response_image",
+      "response",
+      "user"
+    ],
+    "additionalProperties": false
+  },
+  "outputJsonPreview": {
+    "type": "Card",
+    "size": "full",
+    "children": [
+      {
+        "type": "Row",
+        "align": "start",
+        "gap": 4,
+        "children": [
+          {
+            "type": "Image",
+            "src": "https://raw.githubusercontent.com/NavaGS/public-images/dc89af8657baf7cb7d63513393a95ed52bd6f511/mrs-claus.png",
+            "size": 44,
+            "radius": "full"
+          },
+          {
+            "type": "Col",
+            "children": [
+              {
+                "type": "Caption",
+                "value": "Mrs Clause",
+                "size": "lg",
+                "weight": "semibold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Markdown",
+        "value": "Thank you, my clever little Agents! \n\n The **gift is officially chosen**— let's get them a..."
+      },
+      {
+        "type": "Image",
+        "src": "https://raw.githubusercontent.com/NavaGS/public-images/dc89af8657baf7cb7d63513393a95ed52bd6f511/fidget-slinger.png",
+        "size": 400,
+        "frame": true,
+        "fit": "scale-down",
+        "flush": true
+      }
+    ]
+  },
+  "encodedWidget": "eyJpZCI6IndpZ19qbHV3d3llayIsIm5hbWUiOiJtcnNDbGF1c2UiLCJ2aWV3IjoiPENhcmQgc2l6ZT1cImZ1bGxcIj5cbiAgPFJvdyBhbGlnbj1cInN0YXJ0XCIgZ2FwPXs0fT5cbiAgICA8SW1hZ2Ugc3JjPXt1c2VyLmltYWdlfSBzaXplPXs0NH0gcmFkaXVzPVwiZnVsbFwiIC8-XG4gICAgPENvbD5cbiAgICAgIDxDYXB0aW9uIHZhbHVlPXt1c2VyLm5hbWV9IHNpemU9XCJsZ1wiIHdlaWdodD1cInNlbWlib2xkXCIgLz5cbiAgICA8L0NvbD5cbiAgPC9Sb3c-XG4gIDxNYXJrZG93biB2YWx1ZT17cmVzcG9uc2VfbWFya2Rvd259IC8-XG4gIDxJbWFnZSBzcmM9e3Jlc3BvbnNlX2ltYWdlfSBzaXplPXs0MDB9IGZyYW1lIGZpdD1cInNjYWxlLWRvd25cIiBmbHVzaCAvPlxuPC9DYXJkPiIsImRlZmF1bHRTdGF0ZSI6eyJyZXNwb25zZSI6InJldHVybmVkX3Jlc3VsdCIsInJlc3BvbnNlX21hcmtkb3duIjoiVGhhbmsgeW91LCBteSBjbGV2ZXIgbGl0dGxlIEFnZW50cyEgXG5cbiBUaGUgKipnaWZ0IGlzIG9mZmljaWFsbHkgY2hvc2VuKirigJQgbGV0J3MgZ2V0IHRoZW0gYS4uLiIsInJlc3BvbnNlX2ltYWdlIjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL05hdmFHUy9wdWJsaWMtaW1hZ2VzL2RjODlhZjg2NTdiYWY3Y2I3ZDYzNTEzMzkzYTk1ZWQ1MmJkNmY1MTEvZmlkZ2V0LXNsaW5nZXIucG5nIiwidXNlciI6eyJpbWFnZSI6Imh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9OYXZhR1MvcHVibGljLWltYWdlcy9kYzg5YWY4NjU3YmFmN2NiN2Q2MzUxMzM5M2E5NWVkNTJiZDZmNTExL21ycy1jbGF1cy5wbmciLCJuYW1lIjoiTXJzIENsYXVzZSJ9fSwic2NoZW1hIjoiaW1wb3J0IHsgeiB9IGZyb20gXCJ6b2RcIlxuXG5jb25zdCBVc2VyID0gei5vYmplY3Qoe1xuICBpbWFnZTogei5zdHJpbmcoKSxcbiAgbmFtZTogei5zdHJpbmcoKSxcbn0pXG5cbmNvbnN0IFdpZGdldFN0YXRlID0gei5vYmplY3Qoe1xuICByZXNwb25zZV9tYXJrZG93bjogei5zdHJpbmcoKSxcbiAgcmVzcG9uc2VfaW1hZ2U6IHouc3RyaW5nKCksXG4gIHJlc3BvbnNlOiB6LnN0cmluZygpLFxuICB1c2VyOiBVc2VyLFxufSlcblxuZXhwb3J0IGRlZmF1bHQgV2lkZ2V0U3RhdGUiLCJzdGF0ZXMiOltdLCJzY2hlbWFWYWxpZGl0eSI6InZhbGlkIiwic2NoZW1hTW9kZSI6InpvZCIsInZpZXdWYWxpZGl0eSI6InZhbGlkIiwiZGVmYXVsdFN0YXRlVmFsaWRpdHkiOiJ2YWxpZCJ9"
+}
